@@ -25,8 +25,8 @@
   </div>
 </template>
 <script setup lang="tsx">
-import { computed } from 'vue';
 import type { PropType } from 'vue';
+import { computed } from 'vue';
 import type { MenuRoute } from '@/types/interface';
 import { getActive } from '@/router';
 
@@ -48,8 +48,7 @@ const list = computed(() => {
 
 const menuIcon = (item: ListItemType) => {
   if (typeof item.icon === 'string') return <t-icon name={item.icon} />;
-  const RenderIcon = item.icon;
-  return RenderIcon;
+  return item.icon;
 };
 
 const getMenuList = (list: MenuRoute[], basePath?: string): ListItemType[] => {
