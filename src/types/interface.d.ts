@@ -40,7 +40,7 @@ export interface TRouterInfo {
   query?: LocationQueryRaw;
   routeIdx?: number;
   title?: string;
-  name?: RouteRecordName;
+  name?: RouteRecordName | null;
   isAlive?: boolean;
   isHome?: boolean;
   meta?: RouteMeta;

@@ -5,11 +5,12 @@ import { store } from '@/store';
 import { RouteItem } from '@/api/model/permissionModel';
 import { getMenuList } from '@/api/permission';
 import { transformObjectToRoute } from '@/utils/route';
+import { MenuRoute } from '@/types/interface';
 
 export const usePermissionStore = defineStore('permission', {
   state: () => ({
     whiteListRouters: ['/login'],
-    routers: [],
+    routers: [] as Array<MenuRoute>,
     removeRoutes: [],
     asyncRoutes: [],
   }),
